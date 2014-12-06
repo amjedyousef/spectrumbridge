@@ -17,8 +17,8 @@ legend_string(find(~legend_flag))=[];
 %Select which scenario to test
 message_size_distribution=0;
 response_error_calculation=0;
-delay_distribution_per_location=0;
-delay_distribution_area=1;
+delay_distribution_per_location=1;
+delay_distribution_area=0;
 
 %%
 %Plot parameters
@@ -60,7 +60,7 @@ if message_size_distribution==1
     delay_spectrumbridge=[];
     
     ggl_cnt=0;
-    
+    in = 0 ;
     for xx=longitude_start:longitude_step:longitude_end
         in=in+1;
         fprintf('Query no.: %d\n',in)
@@ -76,9 +76,9 @@ if message_size_distribution==1
             instant_clock=clock; %Start clock again if scanning only one database
             cd([my_path,'/spectrumbridge']);
             delay_spectrumbridge_tmp_r=0;
-            if DeviceType=='8'
+            if DeviceType=='3'
                 [msg_spectrumbridge,delay_spectrumbridge_tmp_r]=database_connect_spectrumbridge_register(...
-                    AntennaHeight,DeviceType,Latitude,Longitude,[my_path,'/spectrumbridge']);
+                    AntennaHeight,DeviceType,latitude,longitude,[my_path,'/spectrumbridge']);
             end
             [msg_spectrumbridge,delay_spectrumbridge_tmp,error_spectrumbridge_tmp]=...
                 database_connect_spectrumbridge(DeviceType,latitude,longitude);
