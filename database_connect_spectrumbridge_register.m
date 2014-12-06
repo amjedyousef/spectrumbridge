@@ -1,15 +1,5 @@
 function [response,delay]=database_connect_spectrumbridge_register(...
     AntennaHeight,DeviceType,Latitude,Longitude,my_path)
-%DATABASE_CONNECT_SPECTRUMBRIDGE Script used in querying SpectrumBridge WSDB [1].
-%
-%   Reference: [1] Will Dynamic Spectrum Access Drain my Battery?
-
-%   Code development: 
-
-%   Last update: 29 June 2014
-
-%   This work is licensed under a Creative Commons Attribution 3.0 Unported
-%   License. Link to license: http://creativecommons.org/licenses/by/3.0/
 
 delay=[]; %Default delay value
 error=false; %Default error value

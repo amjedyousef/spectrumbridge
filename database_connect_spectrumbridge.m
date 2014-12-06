@@ -1,15 +1,5 @@
 function [response,delay,error]=database_connect_spectrumbridge(...
     DeviceType,Latitude,Longitude)
-%DATABASE_CONNECT_SPECTRUMBRIDGE Script used in querying SpectrumBridge WSDB [1].
-%
-%   Reference: [1] Will Dynamic Spectrum Access Drain my Battery?
-
-%   Code development: 
-
-%   Last update: 29 June 2014
-
-%   This work is licensed under a Creative Commons Attribution 3.0 Unported
-%   License. Link to license: http://creativecommons.org/licenses/by/3.0/
 
 delay=[]; %Default delay value
 error=false; %Default error value
@@ -17,7 +7,7 @@ error=false; %Default error value
 %%
 %Query constants
 
-SBI_ID=''; %FCC ID [replace by your own]
+SBI_ID='TUDELFT'; %FCC ID [replace by your own]
 SBI_SN='101'; %Device serial number; Set of possible serial numbers [101,102,103,104,105];
 SBI_CC='US'; %Country code
 server_url_base='https://tvws-demo.spectrumbridge.com/v3';
