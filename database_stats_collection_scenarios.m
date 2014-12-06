@@ -26,7 +26,7 @@ ftsz=16;
 
 %%
 %Path to save files (select your own)
-my_path='';
+my_path='/home/amjed/Documents/Gproject/workspace/data/WSDB_DATA/';
 
 %%
 %General querying parameters
@@ -209,7 +209,7 @@ if response_error_calculation==1
         var_spectrumbridge=var(error_spectrumbridge_vec)*100
     end
 end
-
+end 
 if delay_distribution_per_location==1
     
     no_queries=50; %Select how many queries per location
