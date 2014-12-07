@@ -15,9 +15,9 @@ legend_string(find(~legend_flag))=[];
 
 %%
 %Select which scenario to test
-message_size_distribution=0;
+message_size_distribution=1;
 response_error_calculation=0;
-delay_distribution_per_location=1;
+delay_distribution_per_location=0;
 delay_distribution_area=0;
 
 %%
